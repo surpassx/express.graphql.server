@@ -1,0 +1,25 @@
+{
+  "name": "express.grahpQL.server",
+  "version": "1.0.0",
+  "description": "express.graphql.server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/surpassx/express.graphql.server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/surpassx/express.graphql.server/issues"
+  },
+  "homepage": "https://github.com/surpassx/express.graphql.server#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.4.0"
+  }
+}
