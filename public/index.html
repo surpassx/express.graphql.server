@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GraphQL clients</title>
+</head>
+<body>
+
+<script>
+    const variables = {username: 'Mickey', city: '德州'}
+    const query = `query Account($username: String, $city: String)
+    {
+        account(username: $username){
+                username,
+                age,
+                department,
+                sex,
+                salary(city: $city)
+        }
+    }`
+    fetch('/graphql',{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            query,
+            variables
+        })
+    }).then(r=> r.json())
+    .then(data=> console.log('data returned', data))
+
+</script>
+</body>
+</html>
